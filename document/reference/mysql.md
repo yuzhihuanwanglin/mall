@@ -53,8 +53,8 @@ delete from emp where ename='zhangsan'
 
 ## 数据控制语句(DCL)
 
-- 授予操作权限：grant select,insert on test.* to 'test'@'localhost' identified by '123'
-- 收回操作权限：revoke insert on test.* from 'test'@'localhost'
+- 授予操作权限：grant select,insert on test.* to 'test'@'122.152.220.144' identified by '123'
+- 收回操作权限：revoke insert on test.* from 'test'@'122.152.220.144'
 
 ## 其他
 
@@ -68,11 +68,11 @@ delete from emp where ename='zhangsan'
 - 立即生效：flush privileges
 
 ### 权限相关
-- 授予所有数据库的所有权限：grant all privileges on *.* to z1@localhost identified by '123'
-- 授予所有数据库的所有权限(包括grant)：grant all privileges on *.* to z1@localhost with grant option
-- 授予SUPER PROCESS FILE权限：grant super,process,file on *.* to z3@localhost
-- 只授予登录权限：grant usage on *.* to z4@localhost
-- 查看账号权限：show grants for z1@localhost
+- 授予所有数据库的所有权限：grant all privileges on *.* to z1@122.152.220.144 identified by '123'
+- 授予所有数据库的所有权限(包括grant)：grant all privileges on *.* to z1@122.152.220.144 with grant option
+- 授予SUPER PROCESS FILE权限：grant super,process,file on *.* to z3@122.152.220.144
+- 只授予登录权限：grant usage on *.* to z4@122.152.220.144
+- 查看账号权限：show grants for z1@122.152.220.144
 - 修改自己的密码：set password = password('123')
-- 管理员修改他人密码：set password for 'z1'@'localhost' = password('123')
-- 删除账号：drop user z2@localhost
+- 管理员修改他人密码：set password for 'z1'@'122.152.220.144' = password('123')
+- 删除账号：drop user z2@122.152.220.144

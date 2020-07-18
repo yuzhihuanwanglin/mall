@@ -32,7 +32,7 @@
 - 下载地址：https://www.elastic.co/downloads/past-releases/elasticsearch-6-2-2
 - 下载.zip文件，解压到指定目录
 - 安装kibana，用于在浏览器中访问es,请下载6.2.2版本，具体参考：https://www.elastic.co/downloads/kibana
-- 下载.zip包后解压即可，运行bin\kibana.bat，访问http://localhost:5601 查看是否安装成功
+- 下载.zip包后解压即可，运行bin\kibana.bat，访问http://122.152.220.144:5601 查看是否安装成功
 - 中文分词插件地址：https://github.com/medcl/elasticsearch-analysis-ik
 - 安装中文分词插件，在elasticsearch-6.2.2\bin目录下执行以下命令：
 elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.2.2/elasticsearch-analysis-ik-6.2.2.zip
@@ -59,7 +59,7 @@ elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/
 - 关闭服务：net stop MongoDB
 - 移除服务：C:\mongodb\bin\mongod.exe --remove
 - 下载客户端程序：https://download.robomongo.org/1.2.1/windows/robo3t-1.2.1-windows-x86_64-3e50a65.zip
-- 解压到指定目录，打开robo3t.exe并连接到localhost:27017
+- 解压到指定目录，打开robo3t.exe并连接到122.152.220.144:27017
 
 ## rabbitmq
 
@@ -90,16 +90,16 @@ elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/
 ## mall-admin
 
 - 启动项目：直接运行com.macro.mall.MallAdminApplication的main方法即可
-- 接口文档地址：http://localhost:8080/swagger-ui.html
+- 接口文档地址：http://122.152.220.144:8080/swagger-ui.html
 
 ## mall-search
 
 - 启动项目：直接运行com.macro.mall.search.MallSearchApplication的main方法即可
-- 接口文档地址：http://localhost:8081/swagger-ui.html
-- 使用前需要先调用接口导入数据；http://localhost:8081/esProduct/importAll
+- 接口文档地址：http://122.152.220.144:8081/swagger-ui.html
+- 使用前需要先调用接口导入数据；http://122.152.220.144:8081/esProduct/importAll
 - 如出现无法启动的问题，可以先删除elasticsearch里面的数据再启动
 
 ## mall-portal
 
 - 启动mall-portal项目：直接运行com.macro.mall.portal.MallPortalApplication的main方法即可
-- 接口文档地址：http://localhost:8085/swagger-ui.html
+- 接口文档地址：http://122.152.220.144:8085/swagger-ui.html

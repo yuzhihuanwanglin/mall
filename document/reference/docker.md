@@ -46,9 +46,9 @@ docker exec -it $ContainerName /bin/bash
 ### Docker Registry 2.0搭建
 docker run -d -p 5000:5000 --restart=always --name registry2 registry:2
 ### 推送到私有仓库
-docker push localhost:5000/macro/eureka-server:0.0.1
+docker push 122.152.220.144:5000/macro/eureka-server:0.0.1
 ### 修改镜像标签
-docker tag macro/eureka-server:0.0.1 localhost:5000/macro/eureka-server:0.0.1
+docker tag macro/eureka-server:0.0.1 122.152.220.144:5000/macro/eureka-server:0.0.1
 
 ## 使用maven构建Docker镜像
 ### 构建镜像
