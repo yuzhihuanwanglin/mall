@@ -4,6 +4,7 @@ import com.macro.mall.model.CmsSubject;
 import com.macro.mall.model.PmsProduct;
 import com.macro.mall.model.PmsProductCategory;
 import com.macro.mall.portal.domain.HomeContentResult;
+import com.macro.mall.portal.domain.LaunchConfigInfo;
 
 import java.util.List;
 
@@ -12,6 +13,14 @@ import java.util.List;
  * Created by macro on 2019/1/28.
  */
 public interface HomeService {
+
+
+
+    /**
+     * 获取启动页的配置信息
+     */
+    List<LaunchConfigInfo> getLaunchInfos();
+
 
     /**
      * 获取首页内容

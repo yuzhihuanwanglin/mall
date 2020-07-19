@@ -5,6 +5,7 @@ import com.macro.mall.model.CmsSubject;
 import com.macro.mall.model.PmsProduct;
 import com.macro.mall.model.PmsProductCategory;
 import com.macro.mall.portal.domain.HomeContentResult;
+import com.macro.mall.portal.domain.LaunchConfigInfo;
 import com.macro.mall.portal.service.HomeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,6 +25,14 @@ import java.util.List;
 public class HomeController {
     @Autowired
     private HomeService homeService;
+
+    @ApiOperation("获取启动页的配置信息")
+    @RequestMapping(value = "/launchInfo", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult<List<LaunchConfigInfo>> getLaunchInfos() {
+        List<LaunchConfigInfo> launchConfigInfoList = homeService.getLaunchInfos();
+        return CommonResult.success(launchConfigInfoList);
+    }
 
     @ApiOperation("首页内容页信息展示")
     @RequestMapping(value = "/content", method = RequestMethod.GET)

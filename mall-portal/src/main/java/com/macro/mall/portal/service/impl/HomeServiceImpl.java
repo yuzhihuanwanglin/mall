@@ -7,6 +7,9 @@ import com.macro.mall.portal.dao.HomeDao;
 import com.macro.mall.portal.domain.FlashPromotionProduct;
 import com.macro.mall.portal.domain.HomeContentResult;
 import com.macro.mall.portal.domain.HomeFlashPromotion;
+import com.macro.mall.portal.domain.LaunchConfigInfo;
+import com.macro.mall.portal.repository.LaunchConfigInfoRepository;
+import com.macro.mall.portal.repository.ProductCategoryRepository;
 import com.macro.mall.portal.service.HomeService;
 import com.macro.mall.portal.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,10 @@ import java.util.List;
  */
 @Service
 public class HomeServiceImpl implements HomeService {
+
+    @Autowired
+    private LaunchConfigInfoRepository launchConfigInfoRepository;
+
     @Autowired
     private SmsHomeAdvertiseMapper advertiseMapper;
     @Autowired
@@ -36,6 +43,11 @@ public class HomeServiceImpl implements HomeService {
     private PmsProductCategoryMapper productCategoryMapper;
     @Autowired
     private CmsSubjectMapper subjectMapper;
+
+    @Override
+    public List<LaunchConfigInfo> getLaunchInfos() {
+        return launchConfigInfoRepository.findAll();
+    }
 
     @Override
     public HomeContentResult content() {
